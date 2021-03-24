@@ -67,10 +67,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({
-            filename: '[name].[contenthash:4].css'
-        }),
-        new OptimizeCssAssetsPlugin({}),
         new CleanWebpackPlugin(),
         new BundleAnalyzerPlugin(),
         new HtmlWebpackPlugin({
@@ -83,6 +79,9 @@ module.exports = {
     },
     optimization: {
         minimizer: [
+            new MiniCssExtractPlugin({
+                filename: '[name].[contenthash:4].css'
+            }),
             new OptimizeCssAssetsPlugin({}),
             new UglifyJsPlugin(),
         ],

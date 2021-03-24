@@ -102,16 +102,6 @@ module.exports = {
                     enforce: true,
                     test: m => /\/node_modules\/(antd|@ant-design)/.test(m.context),
                 },
-                // vendor: {
-                //     name: 'vendor',
-                //     chunks: 'initial',
-                //     priority: 0,
-                //     reuseExistingChunk: true,
-                //     enforce: true,
-                //     test: m => {
-                //         return /\/node_modules\//.test(m.context)
-                //     }
-                // },
             }
         },
     },
