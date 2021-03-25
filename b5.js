@@ -24,9 +24,10 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    {
-                        loader: path.resolve(__dirname, './css-min-loader.js')
-                    }
+                    'css-min-loader',
+                    // {
+                    //     loader: path.resolve(__dirname, './css-min-loader.js')
+                    // }
                 ],
                 exclude: /node_modules/,
             },
@@ -35,9 +36,10 @@ module.exports = {
                 use: [
                     'style-loader',
                     'css-loader',
-                    {
-                        loader: path.resolve(__dirname, './css-min-loader.js')
-                    },
+                    'css-min-loader',
+                    // {
+                    //     loader: path.resolve(__dirname, './css-min-loader.js')
+                    // },
                     {
                         loader: 'less-loader',
                         options: {
