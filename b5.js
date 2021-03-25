@@ -4,6 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+const CssMinPlugin = require('./css-min-plugin')
+
 module.exports = {
     mode: 'production',
     devtool: 'none',
@@ -73,7 +75,8 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
+        // new CssMinPlugin({}),
         new HtmlWebpackPlugin({
             template: './src/index.html',
             inject: 'body',
